@@ -16,7 +16,7 @@ namespace WinForm_EF_Code_First_Sample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new formMain());
         }
     }
 }
