@@ -19,7 +19,8 @@ namespace WinForm_EF_Code_First_Sample
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            AmazingShop context = new AmazingShop();   
+            using (AmazingShop context=new AmazingShop())
+            {
                 Category Sci_Fi = new Category();
                 Sci_Fi.CategoryName = txtBookCategory.Text;
                 Sci_Fi.Products = new List<Product>
@@ -41,7 +42,7 @@ namespace WinForm_EF_Code_First_Sample
                 {
                     MessageBox.Show("There is a problem while saving changes ");
                 }
-            
+            }
         }
     }
 }
